@@ -1,0 +1,29 @@
+
+body {
+    
+   
+}
+
+
+.board {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5em;
+
+
+}
+
+
+.display {
+    height: 30vh;
+    width: 50vh;
+    background-color: darkslategray;
+}
+
+#ply_d {
+    background-color: darkturquoise;
+}
+
