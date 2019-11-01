@@ -4,7 +4,8 @@
 ---
 ##### The Finger-Head game is a fun activity to do with your friends. However, if you're not around your friends, you can now play it in this browser version of the game.
 ##### Harness your quickdraw prowess(or quickclick as the case may be) and challenge your electronic opponent.
-###### The irl game involves two players alternating rounds. One player initially points his finger in a choosen direction up, down, left or right, simultaniously the other player looks swivels his head in a choosen direction up, down, left or right. If the player swiveling his head looks in the direction the player pointing pointed he loses. Otherwise they switch roles, with the head player now becoming the finger pointer and the finger player swiveling his head. Repeating and alternating rounds until one player loses. With the browser version you play against the computer. Inputing your command for directions with the directional keys, you will alternate being the 'finger' first and 'head' with the computer.
+###### The [irl game](https://www.youtube.com/watch?v=RDpj-myQTa0) involves two players alternating rounds. One player initially points his finger in a choosen direction up, down, left or right, simultaniously the other player looks swivels his head in a choosen direction up, down, left or right. If the player swiveling his head looks in the direction the player pointing pointed he loses. Otherwise they switch roles, with the head player now becoming the finger pointer and the finger player swiveling his head. Repeating and alternating rounds until one player loses. With the browser version you play against the computer. Inputing your command for directions with the directional keys, you will alternate being the 'finger' first and 'head' with the computer.
+
 
 ## User Stories
 
