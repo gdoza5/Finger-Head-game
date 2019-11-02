@@ -32,20 +32,26 @@ console.log('Muffins')
 /*----- event listeners -----*/
 
 
-// document.addEventListener('keydown', function() {
-    
-//     document.getElementById('ply_d').textContent = "YOLO"
-//     console.log(event.code)
-
-// })
+// let plyrInpt = document.addEventListener('keydown', ) 
 
 document.addEventListener('keydown', function() {
     if(event.code === "ArrowUp"){
-    document.getElementById('ply_d').textContent = "YOLO"
+    document.getElementById('ply_d').textContent = "YOLO";
     console.log(event.code)
     }
-
-})
+    if(event.code === "ArrowLeft"){
+         document.getElementById('ply_d').textContent = "Bamf";
+         console.log(event.code);
+     };
+     if(event.code === "ArrowRight"){
+        document.getElementById('ply_d').textContent = "Yuss"
+        console.log(event.code)
+     }
+     if(event.code === "ArrowDown"){
+        document.getElementById('ply_d').textContent = "JoJo"
+        console.log(event.code)
+     }
+});
 
 document.addEventListener('keydown', function() {
     if(event.code === "ArrowDown")
