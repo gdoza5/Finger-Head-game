@@ -1,7 +1,8 @@
 /*----- constants -----*/
-
+let playerInput = null
 const game ={
     rounds: [],
+    //playerInput: null,
     rando: function(max){return Math.floor(Math.random() * Math.floor(max));},
     hdtrn: function(){},
     finger: function(){},
@@ -9,7 +10,7 @@ const game ={
         let aDInput = game.rando(4);
         if(aDInput === 3){
             document.getElementById('ad_d').textContent = "Bite my shiny metal Axe";
-             return aDInput
+            return aDInput
             }
         if(aDInput === 1){
                  document.getElementById('ad_d').textContent = "no compute";
@@ -25,8 +26,31 @@ const game ={
             }
            
         },
-    
-}
+        
+     playerChoice: function(){
+        
+        if(playerInput === "ArrowUp"){
+            document.getElementById('ply_d').textContent = "Yolo!";
+            return 0;
+        } if(playerInput === "ArrowRight"){
+            document.getElementById('ply_d').textContent = "Dommo Arigato";
+            return 1;
+        } if(playerInput === "ArrowDown"){
+            document.getElementById('ply_d').textContent = "Bizarre Adventure";
+            return 2;
+        } if(playerInput === "ArrowLeft"){
+            document.getElementById('ply_d').textContent = "Hello meatbag";
+            return 3;
+        }
+
+        
+     },
+    play: function(){
+            this.playerChoice();
+            this.compChoice();
+            while(playerInput !== this.compChoice){}
+    },
+};
 
 
 
@@ -56,35 +80,41 @@ const game ={
 
 
 /*----- event listeners -----*/
-
+document.addEventListener('keydown', function(event){
+    playerInput = event.code;
+});
 
 // let plyrInpt = document.addEventListener('keydown', ) 
 
- document.addEventListener('keydown', function(event){
-        if(event.code === "ArrowUp"){
-        document.getElementById('ply_d').textContent = "YOLO";
-        console.log(event.code)
-        }
-        if(event.code === "ArrowLeft"){
-         document.getElementById('ply_d').textContent = "Bamf";
-         console.log(event.code);
-        };
-        if(event.code === "ArrowRight"){
-        document.getElementById('ply_d').textContent = "Yuss"
-        console.log(event.code)
-        }
-         if(event.code === "ArrowDown"){
-        document.getElementById('ply_d').textContent = "JoJo"
-        console.log(event.code)
-        }
-    });
+//  document.addEventListener('keydown', function(event){
+//         if(event.code === "ArrowUp"){
+//         document.getElementById('ply_d').textContent = "YOLO";
+//         console.log(event.code);
+//         return 0;
+//         }
+//         if(event.code === "ArrowLeft"){
+//          document.getElementById('ply_d').textContent = "Bamf";
+//          console.log(event.code);
+//          return 3;
+//         };
+//         if(event.code === "ArrowRight"){
+//         document.getElementById('ply_d').textContent = "Yuss"
+//         console.log(event.code);
+//         return 1;
+//         }
+//          if(event.code === "ArrowDown"){
+//         document.getElementById('ply_d').textContent = "JoJo"
+//         console.log(event.code);
+//         return 2;
+//         }
+//     });
 
-document.addEventListener('keydown', function() {
-    if(event.code === "ArrowDown")
-    document.getElementById('ad_d').textContent = "helloMeatBag"
-    console.log(event.code)
+// document.addEventListener('keydown', function() {
+//     if(event.code === "ArrowDown")
+//     document.getElementById('ad_d').textContent = "helloMeatBag"
+//     console.log(event.code)
 
-})
+// })
 
 
 
@@ -118,9 +148,5 @@ function aDChoice(aDInput){
 
    console.log(aDInput)
 
-   function play(){};
-
-   function init() {
-    aDChoice();
-
-   };
+   
+   
