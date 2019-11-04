@@ -5,7 +5,9 @@ const game ={
     //playerInput: null,
     rando: function(max){return Math.floor(Math.random() * Math.floor(max));},
     hdtrn: function(){},
-    finger: function(){},
+    finger: function(){
+
+    },
     compChoice: function(){
         let aDInput = game.rando(4);
         if(aDInput === 3){
@@ -45,12 +47,22 @@ const game ={
 
         
      },
-    play: function(){
-            this.playerChoice();
-            this.compChoice();
-            while(playerInput !== this.compChoice){}
-    },
+    // gotta figure this function out
+    //  play: function(){
+    //         this.playerChoice();
+    //         this.compChoice();
+    //         while(this.playerChoice !== this.compChoice){
+    //             this.playerChoice;
+    //             this.compChoice;
+    //             this.rounds.push(1);
+    //         if(this.playerChoice === this.compChoice)
+    //         return "win"
+    //         }
+    // },
 };
+
+
+
 
 
 
