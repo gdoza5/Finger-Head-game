@@ -6,28 +6,26 @@ const game ={
     hdtrn: function(){},
     finger: function(){},
     compChoice: function(){
-        
-        let aDInput = rando(4);
-       
-       function aDChoice(aDInput){
-              if(aDInput === 3){
-                 document.getElementById('ad_d').textContent = "Bite my shiny metal Axe";
-                 return aDInput
-              }
-             if(aDInput === 1){
+        let aDInput = game.rando(4);
+        if(aDInput === 3){
+            document.getElementById('ad_d').textContent = "Bite my shiny metal Axe";
+             return aDInput
+            }
+        if(aDInput === 1){
                  document.getElementById('ad_d').textContent = "no compute";
                  return aDInput
-             }
-             if(aDInput === 0){
+            }
+        if(aDInput === 0){
                  document.getElementById('ad_d').textContent = "Yuss";
                  return aDInput
-             }
-            if(aDInput === 2){
+            }
+        if(aDInput === 2){
                  document.getElementById('ad_d').textContent = "JoJo";
                  return aDInput
-             }
-          } 
+            }
+           
         },
+    
 }
 
 
