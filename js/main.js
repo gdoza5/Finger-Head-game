@@ -1,11 +1,17 @@
 /*----- constants -----*/
 let playerInput = null
 const game ={
-    rounds: [],
+    rounds: [1],
     //playerInput: null,
     rando: function(max){return Math.floor(Math.random() * Math.floor(max));},
     hdtrn: function(){},
     finger: function(){
+        if(this.rounds.length % 2 === 1 ){
+            game.compChoice();
+            game.playerChoice();
+            game.rounds.push(1);
+            game.compare();
+        }
 
     },
     compChoice: function(){
@@ -46,6 +52,14 @@ const game ={
         }
 
         
+     },
+
+
+     compare: function(){
+         if(this.playerChoice === this.compChoice){
+             return alert('You Win!')
+         }
+
      },
     // gotta figure this function out
     //  play: function(){
