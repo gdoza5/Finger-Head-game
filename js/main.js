@@ -4,13 +4,23 @@ const game ={
     rounds: [1],
     //playerInput: null,
     rando: function(max){return Math.floor(Math.random() * Math.floor(max));},
-    hdtrn: function(){},
+    hdtrn: function(){
+        if(this.rounds.length % 2 === 0 ){
+        game.compChoice();
+        game.playerChoice();
+        game.rounds.push(1);
+        game.compare();
+        
+        
+        }
+    },
     finger: function(){
         if(this.rounds.length % 2 === 1 ){
             game.compChoice();
             game.playerChoice();
             game.rounds.push(1);
             game.compare();
+            
         }
 
     },
@@ -39,15 +49,19 @@ const game ={
         
         if(playerInput === "ArrowUp"){
             document.getElementById('ply_d').textContent = "Yolo!";
+            game.compChoice();
             return 0;
         } if(playerInput === "ArrowRight"){
             document.getElementById('ply_d').textContent = "Dommo Arigato";
+            game.compChoice();
             return 1;
         } if(playerInput === "ArrowDown"){
             document.getElementById('ply_d').textContent = "Bizarre Adventure";
+            game.compChoice();
             return 2;
         } if(playerInput === "ArrowLeft"){
             document.getElementById('ply_d').textContent = "Hello meatbag";
+            game.compChoice();
             return 3;
         }
 
@@ -56,9 +70,13 @@ const game ={
 
 
      compare: function(){
-         if(this.playerChoice === this.compChoice){
-             return alert('You Win!')
+         if(this.playerChoice() === this.compChoice() && this.rounds.length % 2 === 1){
+             return window.alert('You Win!')
          }
+         if(this.playerChoice() === this.compChoice() && this.rounds.length % 2 === 0){
+            return window.alert('You Lose, MeatBag!')
+        }
+         
 
      },
     // gotta figure this function out
@@ -108,6 +126,9 @@ const game ={
 /*----- event listeners -----*/
 document.addEventListener('keydown', function(event){
     playerInput = event.code;
+    game.playerChoice();
+    game.compare();
+    game.rounds.push(1);
 });
 
 // let plyrInpt = document.addEventListener('keydown', ) 
@@ -149,30 +170,29 @@ document.addEventListener('keydown', function(event){
 /*----- functions -----*/
 
 
- function getRandomInt(max) {
-     return Math.floor(Math.random() * Math.floor(max));
-   }
-    let aDInput = getRandomInt(4);
+//  function getRandomInt(max) {
+//      return Math.floor(Math.random() * Math.floor(max));
+//    }
+//     let aDInput = getRandomInt(4);
 
-function aDChoice(aDInput){
-       if(aDInput === 3){
-           return document.getElementById('ad_d').textContent = "Bite my shiny metal Axe"
-       }
-      if(aDInput === 1){
-          return document.getElementById('ad_d').textContent = "no compute";
+// function aDChoice(aDInput){
+//        if(aDInput === 3){
+//            return document.getElementById('ad_d').textContent = "Bite my shiny metal Axe"
+//        }
+//       if(aDInput === 1){
+//           return document.getElementById('ad_d').textContent = "no compute";
         
-      }
-      if(aDInput === 0){
-         return document.getElementById('ad_d').textContent = "Yuss"
+//       }
+//       if(aDInput === 0){
+//          return document.getElementById('ad_d').textContent = "Yuss"
        
-      }
-     if(aDInput === 2){
-         return document.getElementById('ad_d').textContent = "JoJo"
+//       }
+//      if(aDInput === 2){
+//          return document.getElementById('ad_d').textContent = "JoJo"
        
-      }
-   }
+//       }
+//    }
 
-   console.log(aDInput)
-
+   
    
    
