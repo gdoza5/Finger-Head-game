@@ -28,7 +28,14 @@ body {
 }
 
 #ply_d {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     background-color: darkturquoise;
     align-content: center;
+}
+
+img {
+    padding: 5px;
 }
 

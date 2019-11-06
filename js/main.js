@@ -4,26 +4,26 @@ const game ={
     rounds: [1],
     //playerInput: null,
     rando: function(max){return Math.floor(Math.random() * Math.floor(max));},
-    hdtrn: function(){
-        if(this.rounds.length % 2 === 0 ){
-        game.compChoice();
-        game.playerChoice();
-        game.rounds.push(1);
-        game.compare();
+    // hdtrn: function(){
+    //     if(this.rounds.length % 2 === 0 ){
+    //     game.compChoice();
+    //     game.playerChoice();
+    //     game.rounds.push(1);
+    //     game.compare();
         
         
-        }
-    },
-    finger: function(){
-        if(this.rounds.length % 2 === 1 ){
-            game.compChoice();
-            game.playerChoice();
-            game.rounds.push(1);
-            game.compare();
+    //     }
+    // },
+    // finger: function(){
+    //     if(this.rounds.length % 2 === 1 ){
+    //         game.compChoice();
+    //         game.playerChoice();
+    //         game.rounds.push(1);
+    //         game.compare();
             
-        }
+    //     }
 
-    },
+    // },
     compChoice: function(){
         let aDInput = game.rando(4);
         if(aDInput === 3){
@@ -125,12 +125,12 @@ const game ={
         } if(playerInput === "ArrowLeft"){
             if(this.rounds.length % 2=== 0){
                 console.log("face1")
-                 document.getElementById('ply_d').innerHTML ='<img src="assets/face looking down.jpeg" width="210" height="120">'
+                 document.getElementById('ply_d').innerHTML ='<img src="assets/face looking left.jpeg" width="210" height="120">'
                 // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
             }
             else if(this.rounds.length % 2=== 1){
                 console.log("face2")
-                document.getElementById('ply_d').innerHTML ='<img src="assets/finger point down.png" width="210" height="120">'
+                document.getElementById('ply_d').innerHTML ='<img src="assets/left point.jpeg" width="210" height="120">'
             }
             // document.getElementById('ply_d').textContent = "Hello meatbag";
             game.compChoice();
