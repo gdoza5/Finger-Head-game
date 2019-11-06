@@ -34,21 +34,48 @@ const game ={
                 }
                 else if(this.rounds.length % 2=== 0){
                     console.log("face2")
-                    document.getElementById('ad_d').innerHTML ='<img src="assets/left point.jpeg" width="250" height="200">'
+                    document.getElementById('ad_d').innerHTML ='<img src="assets/left point.jpeg" width="213" height="127">'
                 }
             // document.getElementById('ad_d').textContent = "Bite my shiny metal Axe";
             return aDInput
             }
         if(aDInput === 1){
-                 document.getElementById('ad_d').textContent = "no compute";
+            if(this.rounds.length % 2=== 1){
+                console.log("face1")
+                 document.getElementById('ad_d').innerHTML ='<img src="assets/face looking to the right.jpeg" width="213" height="127">'
+                // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
+            }
+            else if(this.rounds.length % 2=== 0){
+                console.log("face2")
+                document.getElementById('ad_d').innerHTML ='<img src="assets/download.png" width="213" height="127">'
+            }
+                //  document.getElementById('ad_d').textContent = "no compute";
                  return aDInput
             }
         if(aDInput === 0){
-                 document.getElementById('ad_d').textContent = "Yuss";
+            if(this.rounds.length % 2=== 1){
+                console.log("face1")
+                 document.getElementById('ad_d').innerHTML ='<img src="assets/face looking up.jpeg" width="213" height="127">'
+                // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
+            }
+            else if(this.rounds.length % 2=== 0){
+                console.log("face2")
+                document.getElementById('ad_d').innerHTML ='<img src="assets/finger point up.jpeg" width="213" height="127">'
+            }
+                //  document.getElementById('ad_d').textContent = "Yuss";
                  return aDInput
             }
         if(aDInput === 2){
-                 document.getElementById('ad_d').textContent = "JoJo";
+            if(this.rounds.length % 2=== 1){
+                console.log("face1")
+                 document.getElementById('ad_d').innerHTML ='<img src="assets/face looking down.jpeg" width="213" height="127">'
+                // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
+            }
+            else if(this.rounds.length % 2=== 0){
+                console.log("face2")
+                document.getElementById('ad_d').innerHTML ='<img src="assets/finger point down.png" width="213" height="127">'
+            }
+                //  document.getElementById('ad_d').textContent = "JoJo";
                  return aDInput
             }
            
