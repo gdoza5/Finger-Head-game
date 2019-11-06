@@ -27,7 +27,16 @@ const game ={
     compChoice: function(){
         let aDInput = game.rando(4);
         if(aDInput === 3){
-            document.getElementById('ad_d').textContent = "Bite my shiny metal Axe";
+                if(this.rounds.length % 2=== 1){
+                    console.log("face1")
+                     document.getElementById('ad_d').innerHTML ='<img src="assets/face looking left.jpeg" width="213" height="127">'
+                    // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
+                }
+                else if(this.rounds.length % 2=== 0){
+                    console.log("face2")
+                    document.getElementById('ad_d').innerHTML ='<img src="assets/left point.jpeg" width="250" height="200">'
+                }
+            // document.getElementById('ad_d').textContent = "Bite my shiny metal Axe";
             return aDInput
             }
         if(aDInput === 1){
