@@ -30,7 +30,7 @@ body {
 #ply_d {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     background-color: darkturquoise;
     align-content: center;
 }
