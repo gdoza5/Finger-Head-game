@@ -29,12 +29,12 @@ const game ={
         if(aDInput === 3){
                 if(this.rounds.length % 2=== 1){
                     console.log("face1")
-                     document.getElementById('ad_d').innerHTML ='<img src="assets/face looking left.jpeg" width="213" height="127">'
+                     document.getElementById('ad_d').innerHTML ='<img src="assets/face looking left.jpeg" width="210" height="120">'
                     // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
                 }
                 else if(this.rounds.length % 2=== 0){
                     console.log("face2")
-                    document.getElementById('ad_d').innerHTML ='<img src="assets/left point.jpeg" width="213" height="127">'
+                    document.getElementById('ad_d').innerHTML ='<img src="assets/left point.jpeg" width="210" height="120">'
                 }
             // document.getElementById('ad_d').textContent = "Bite my shiny metal Axe";
             return aDInput
@@ -42,12 +42,12 @@ const game ={
         if(aDInput === 1){
             if(this.rounds.length % 2=== 1){
                 console.log("face1")
-                 document.getElementById('ad_d').innerHTML ='<img src="assets/face looking to the right.jpeg" width="213" height="127">'
+                 document.getElementById('ad_d').innerHTML ='<img src="assets/face looking to the right.jpeg" width="210" height="120">'
                 // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
             }
             else if(this.rounds.length % 2=== 0){
                 console.log("face2")
-                document.getElementById('ad_d').innerHTML ='<img src="assets/download.png" width="213" height="127">'
+                document.getElementById('ad_d').innerHTML ='<img src="assets/download.png" width="210" height="120">'
             }
                 //  document.getElementById('ad_d').textContent = "no compute";
                  return aDInput
@@ -55,12 +55,12 @@ const game ={
         if(aDInput === 0){
             if(this.rounds.length % 2=== 1){
                 console.log("face1")
-                 document.getElementById('ad_d').innerHTML ='<img src="assets/face looking up.jpeg" width="213" height="127">'
+                 document.getElementById('ad_d').innerHTML ='<img src="assets/face looking up.jpeg" width="210" height="120">'
                 // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
             }
             else if(this.rounds.length % 2=== 0){
                 console.log("face2")
-                document.getElementById('ad_d').innerHTML ='<img src="assets/finger point up.jpeg" width="213" height="127">'
+                document.getElementById('ad_d').innerHTML ='<img src="assets/finger point up.jpeg" width="210" height="120">'
             }
                 //  document.getElementById('ad_d').textContent = "Yuss";
                  return aDInput
@@ -68,12 +68,12 @@ const game ={
         if(aDInput === 2){
             if(this.rounds.length % 2=== 1){
                 console.log("face1")
-                 document.getElementById('ad_d').innerHTML ='<img src="assets/face looking down.jpeg" width="213" height="127">'
+                 document.getElementById('ad_d').innerHTML ='<img src="assets/face looking down.jpeg" width="210" height="120">'
                 // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
             }
             else if(this.rounds.length % 2=== 0){
                 console.log("face2")
-                document.getElementById('ad_d').innerHTML ='<img src="assets/finger point down.png" width="213" height="127">'
+                document.getElementById('ad_d').innerHTML ='<img src="assets/finger point down.png" width="210" height="120">'
             }
                 //  document.getElementById('ad_d').textContent = "JoJo";
                  return aDInput
@@ -84,19 +84,55 @@ const game ={
      playerChoice: function(){
         
         if(playerInput === "ArrowUp"){
-            document.getElementById('ply_d').textContent = "Yolo!";
+            if(this.rounds.length % 2=== 0){
+                console.log("face1")
+                 document.getElementById('ply_d').innerHTML ='<img src="assets/face looking up.jpeg" width="210" height="120">'
+                // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
+            }
+            else if(this.rounds.length % 2=== 1){
+                console.log("face2")
+                document.getElementById('ply_d').innerHTML ='<img src="assets/finger point up.jpeg" width="210" height="120">'
+            }
+            // document.getElementById('ply_d').textContent = "Yolo!";
             game.compChoice();
             return 0;
         } if(playerInput === "ArrowRight"){
-            document.getElementById('ply_d').textContent = "Dommo Arigato";
+            if(this.rounds.length % 2=== 0){
+                console.log("face1")
+                 document.getElementById('ply_d').innerHTML ='<img src="assets/face looking to the right.jpeg" width="210" height="120">'
+                // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
+            }
+            else if(this.rounds.length % 2=== 1){
+                console.log("face2")
+                document.getElementById('ply_d').innerHTML ='<img src="assets/download.png" width="210" height="120">'
+            }
+            // document.getElementById('ply_d').textContent = "Dommo Arigato";
             game.compChoice();
             return 1;
         } if(playerInput === "ArrowDown"){
-            document.getElementById('ply_d').textContent = "Bizarre Adventure";
+            if(this.rounds.length % 2=== 0){
+                console.log("face1")
+                 document.getElementById('ply_d').innerHTML ='<img src="assets/face looking down.jpeg" width="210" height="120">'
+                // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
+            }
+            else if(this.rounds.length % 2=== 1){
+                console.log("face2")
+                document.getElementById('ply_d').innerHTML ='<img src="assets/finger point down.png" width="210" height="120">'
+            }
+            // document.getElementById('ply_d').textContent = "Bizarre Adventure";
             game.compChoice();
             return 2;
         } if(playerInput === "ArrowLeft"){
-            document.getElementById('ply_d').textContent = "Hello meatbag";
+            if(this.rounds.length % 2=== 0){
+                console.log("face1")
+                 document.getElementById('ply_d').innerHTML ='<img src="assets/face looking down.jpeg" width="210" height="120">'
+                // document.getElementById('ad_d').innerHTML ='<h1>Hello</h1>'
+            }
+            else if(this.rounds.length % 2=== 1){
+                console.log("face2")
+                document.getElementById('ply_d').innerHTML ='<img src="assets/finger point down.png" width="210" height="120">'
+            }
+            // document.getElementById('ply_d').textContent = "Hello meatbag";
             game.compChoice();
             return 3;
         }
