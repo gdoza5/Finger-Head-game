@@ -137,7 +137,7 @@ const game ={
             
             this.compWins.push(1);
             document.getElementById("comp-score").innerText = `Comp Score:${game.compWins.length -1}`;
-            return window.alert('You Lose, MeatBag!')
+            return Swal.fire('Any fool can use a computer')
         }
          
 
