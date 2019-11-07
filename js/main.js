@@ -2,28 +2,10 @@
 let playerInput = null
 const game ={
     rounds: [1],
-    //playerInput: null,
+    playerInput: null,
+    compInput: "not",
     rando: function(max){return Math.floor(Math.random() * Math.floor(max));},
-    // hdtrn: function(){
-    //     if(this.rounds.length % 2 === 0 ){
-    //     game.compChoice();
-    //     game.playerChoice();
-    //     game.rounds.push(1);
-    //     game.compare();
-        
-        
-    //     }
-    // },
-    // finger: function(){
-    //     if(this.rounds.length % 2 === 1 ){
-    //         game.compChoice();
-    //         game.playerChoice();
-    //         game.rounds.push(1);
-    //         game.compare();
-            
-    //     }
-
-    // },
+    
     compChoice: function(){
         let aDInput = game.rando(4);
         if(aDInput === 3){
@@ -36,7 +18,7 @@ const game ={
                     console.log('3c')
                     document.getElementById('ad_d').innerHTML ='<img src="assets/left point.jpeg" width="210" height="120">'
                 }
-            // document.getElementById('ad_d').textContent = "Bite my shiny metal Axe";
+            this.compInput = aDInput;
             return aDInput
             }
         if(aDInput === 1){
@@ -49,7 +31,7 @@ const game ={
                 console.log('1c')
                 document.getElementById('ad_d').innerHTML ='<img src="assets/download.png" width="210" height="120">'
             }
-                //  document.getElementById('ad_d').textContent = "no compute";
+            this.compInput = aDInput;
                  return aDInput
             }
         if(aDInput === 0){
@@ -62,7 +44,7 @@ const game ={
                 console.log('0c')
                 document.getElementById('ad_d').innerHTML ='<img src="assets/finger point up.jpeg" width="210" height="120">'
             }
-                //  document.getElementById('ad_d').textContent = "Yuss";
+            this.compInput = aDInput;
                  return aDInput
             }
         if(aDInput === 2){
@@ -75,7 +57,7 @@ const game ={
                 console.log('2c')
                 document.getElementById('ad_d').innerHTML ='<img src="assets/finger point down.png" width="210" height="120">'
             }
-                //  document.getElementById('ad_d').textContent = "JoJo";
+            this.compInput = aDInput;
                  return aDInput
             }
            
@@ -93,7 +75,7 @@ const game ={
                 console.log('0p')
                 document.getElementById('ply_d').innerHTML ='<img src="assets/finger point up.jpeg" width="210" height="120">'
             }
-            // document.getElementById('ply_d').textContent = "Yolo!";
+            this.playerInput = 0;
             game.compChoice();
             return 0;
         } if(playerInput === "ArrowRight"){
@@ -106,7 +88,7 @@ const game ={
                 console.log('1p')
                 document.getElementById('ply_d').innerHTML ='<img src="assets/download.png" width="210" height="120">'
             }
-            // document.getElementById('ply_d').textContent = "Dommo Arigato";
+            this.playerInput = 1;
             game.compChoice();
             return 1;
         } if(playerInput === "ArrowDown"){
@@ -119,7 +101,7 @@ const game ={
                 console.log('2p')
                 document.getElementById('ply_d').innerHTML ='<img src="assets/finger point down.png" width="210" height="120">'
             }
-            // document.getElementById('ply_d').textContent = "Bizarre Adventure";
+            this.playerInput = 2;
             game.compChoice();
             return 2;
         } if(playerInput === "ArrowLeft"){
@@ -132,7 +114,7 @@ const game ={
                 console.log('3p')
                 document.getElementById('ply_d').innerHTML ='<img src="assets/left point.jpeg" width="210" height="120">'
             }
-            // document.getElementById('ply_d').textContent = "Hello meatbag";
+            this.playerInput = 3;
             game.compChoice();
             return 3;
         }
@@ -142,10 +124,10 @@ const game ={
 
 
      compare: function(){
-         if(this.playerChoice() === this.compChoice() && this.rounds.length % 2 === 1){
+         if(this.playerInput === this.compInput && this.rounds.length % 2 === 1){
              return window.alert('You Win!')
          }
-         if(this.playerChoice() === this.compChoice() && this.rounds.length % 2 === 0){
+         if(this.playerInput === this.compInput && this.rounds.length % 2 === 0){
             return window.alert('You Lose, MeatBag!')
         }
          
