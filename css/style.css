@@ -13,9 +13,11 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding-top: 5em;
+    padding-left: 10em;
+    
 
 
 }
@@ -46,3 +48,16 @@ img {
     padding: 5px;
 }
 
+p {
+    display: flex;
+    height: 800px;
+    width: 400px;
+    padding-top: 5em;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}

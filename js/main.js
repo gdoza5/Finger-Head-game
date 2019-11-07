@@ -7,8 +7,7 @@ const game ={
     rando: function(max){return Math.floor(Math.random() * Math.floor(max));},
     compWins: [1],
     playerWins: [1],
-    // playerBoard: document.getElementById("play-score"),
-    //compBoard: document.getElementById("comp-score").innerText = `Comp Score:${this.compWins.length}`,
+    
     compChoice: function(){
         let aDInput = game.rando(4);
         if(aDInput === 3){
@@ -127,14 +126,17 @@ const game ={
 
 
      compare: function(){
-         if(this.playerInput === this.compInput && this.rounds.length % 2 === 1){
-             this.playerWins.push(1);
+         if(this.playerInput === this.compInput && this.rounds.length % 2 === 1 ){
+            
+            this.playerWins.push(1);
+            document.getElementById("play-score").innerText = `Player Score:${game.playerWins.length -1}`;
              return window.alert('You Win!');
             
          }
          if(this.playerInput === this.compInput && this.rounds.length % 2 === 0){
-             this.compWins.push(1);
-             document.getElementById("comp-score").innerText = `Comp Score:${game.compWins.length -1}`;
+            
+            this.compWins.push(1);
+            document.getElementById("comp-score").innerText = `Comp Score:${game.compWins.length -1}`;
             return window.alert('You Lose, MeatBag!')
         }
          
@@ -175,7 +177,7 @@ const game ={
 
 /*----- cached element references -----*/
 
-let playerBoard = document.getElementById("play-score").innerText = `Comp Score:${game.playerWins.length -1}`
+let playerBoard = document.getElementById("play-score").innerText = `Player Score:${game.playerWins.length -1}`
  let compBoard = document.getElementById("comp-score").innerText = `Comp Score:${game.compWins.length -1}`
 
 
