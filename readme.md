@@ -28,7 +28,7 @@
 
 ![](assets/3-New-page2.png)
 
-![](4-New-page3.png)
+![](assets/4-New-page3.png)
 
 
 ## Tech
