@@ -16,7 +16,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 5em;
+    padding-top: 2em;
     padding-left: 7em;
     color: goldenrod;
     height: auto;
@@ -55,14 +55,15 @@ p {
     height: 800px;
     width: 500px;
     padding-top: 3em;
+    padding-left: 3em;
     color: rgba(245, 245, 245, 0.822);
 }
 
 #container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    font-family: 'Indie Flower', cursive;
+    justify-content: center;
+    font-family: 'McLaren', cursive;
     font-size: 1.2em;
 
 }
@@ -71,12 +72,17 @@ a{
     color: rgb(218, 165, 32);
 }
 
-
+#instructions{
+    color: goldenrod;
+    padding-top: 1em;
+}
 
 
 
   #instructions:hover .dropdown-content {
     display: block;
+    
+    
   }
 
   .dropdown-content p {

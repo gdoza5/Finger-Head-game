@@ -130,14 +130,23 @@ const game ={
             
             this.playerWins.push(1);
             document.getElementById("play-score").innerText = `Player Score:${game.playerWins.length -1}`;
-             return window.alert('You Win!');
-            
+             return Swal.fire({
+                imageUrl: 'assets/Karl_losing.gif',
+                imageHeight: 300,
+                imageAlt: 'A tall image',
+                text: 'You won!(Karl is a sore loser)'
+              })
          }
          if(this.playerInput === this.compInput && this.rounds.length % 2 === 0){
             
             this.compWins.push(1);
-            document.getElementById("comp-score").innerText = `Comp Score:${game.compWins.length -1}`;
-            return Swal.fire('Any fool can use a computer')
+            document.getElementById("comp-score").innerText = `Karl's Score:${game.compWins.length -1}`;
+            return Swal.fire({
+                imageUrl: 'assets/Karl_wins.gif',
+                imageHeight: 300,
+                imageAlt: 'A tall image',
+                text: 'Karl won!(he is not a gracious winner)'
+              })
         }
          
 
