@@ -22,7 +22,7 @@
 
 ## Wire Frame
 
-![](assets/1-Initial-screen.png)
+![](assets/1-Initial-Screen.png)
 
 ![](assets/2-New-page1.png)
 
