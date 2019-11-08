@@ -22,6 +22,14 @@
 
 ## Wire Frame
 
+![](assets/1-Initial-screen.png)
+
+![](assets/2-New-page1.png)
+
+![](assets/3-New-page2.png)
+
+![](4-New-page3.png)
+
 
 ## Tech
 ###### I will use Javascript to impliment the functionality of the game. I will use CSS to style it and HTML to provide the frame work.
